@@ -7,4 +7,8 @@ class IslandsController < ApplicationController
     @island = Island.find(1)
     @spots = Spot.all
   end
+
+  def entry
+    @island = Island.find(1)
+  end
 end
