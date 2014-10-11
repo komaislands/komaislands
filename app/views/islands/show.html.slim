@@ -2,12 +2,14 @@ h1= @island.name
 
 = image_tag "island_#{@island.id}.jpg"
 
-ul
-  - @spots.each do |spot|
-    li
+div class="large-12 columns"
+  div class="row"
+    - @spots.each do |spot|
       = link_to spot do
-        = image_tag "spot_#{spot.id}.jpg", size: "180x240"
-        = spot.description
+        div class="large-3 small-6 columns"
+          = image_tag "spot_#{spot.id}.jpg"
+          = spot.description
+
 
 = link_to "#{@island.name}へいく", {}, class: 'button'
 
