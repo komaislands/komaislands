@@ -1,1 +1,27 @@
-h1 = @spot.description
+.row
+  .columns
+    h1 = @spot.description
+.row
+  .columns
+    img.th src=image_path("spot_1.jpg")
+.row
+  .columns
+    h2 詳細情報
+    dl
+      dt 日時
+      dd #{@spot.date} #{@spot.time}
+    dl
+      dt 天気
+      dd = @spot.tenki
+    dl
+      dt 場所
+      dd = @spot.place
+    dl
+      dt 撮影者
+      dd = @spot.people
+    dl
+      dt 気持ち
+      dd = @spot.kimoti
+.row
+  .columns
+    a.button href=url_for(@island) #{@island.name}にもどる

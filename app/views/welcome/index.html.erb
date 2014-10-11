@@ -1,49 +1,54 @@
-<div class="row">
-  <div class="main-image">
+<div class="main-image row">
+  <div clas="small-12 columns">
     <%= image_tag "main.jpg" %>
   </div>
 </div>
 
-<div class="row desc">
-  <% @spots.each do |spot| %>
-    <div class="large-3 medium-3 small-6 columns">
-      <%= link_to Island.find(1) do %>
-        <% image_tag "spot_#{spot.id}.jpg" %>
+<div class="row">
+  <div class="columns">
+    <ul class="large-block-grid-4 medium-block-grid-4 small-block-grid-2">
+      <% @spots.each do |spot| %>
+        <li>
+          <%= link_to Island.find(1) do %>
+            <%= image_tag "spot_#{spot.id}.jpg", class: "th" %>
+          <% end %>
+        </li>
       <% end %>
-    </div>
-  <% end %>
+    </ul>
+  </div>
 </div>
 
-<div>
-  <div class="row">
-    <div class="large-12 columns">
-      <div class="large-8 columns">
-        <div class="row">
-            <h4>私のせまい島。</h4>
-            <hr/>
-            <div class="large-6 small-6 columns">
-              <p>漁師は人生の大半を海で過ごす。</p>
-              <p>来る日も来る日も空を見て、島を感じ、海で仕事をする。
-                日々の中に季節を感じ、最高の一瞬を目撃する。</p>
-              <p>その一瞬を共に感じ
-                私だけの島を収める体験。</p>
-            </div>
-            <div class="large-6 small-6 columns">
-              <p>
-                KOMAILANDSは瀬戸内に浮かぶ3000もの島々に住む人と私だけの一瞬を求める人を結ぶプラットホームです。瀬戸内で生まれ育つ人々が感じる島の表情は何でしょう。瀬戸内海で日々生まれる美しい一瞬をあなたのカメラで撮影してみませんか。そこには、島の数だけ、そして、あなただけの瞬間をとらえる時間があるでしょう。
-              </p>
-          </div>
+<div class="row">
+  <div class="large-12 columns">
+    <div class="large-8 columns">
+      <div class="row">
+        <div class="columns">
+          <h4>私のせまい島。</h4>
+          <hr/>
+        </div>
+        <div class="large-6 small-12 columns">
+          <p>漁師は人生の大半を海で過ごす。</p>
+          <p>来る日も来る日も空を見て、島を感じ、海で仕事をする。
+            日々の中に季節を感じ、最高の一瞬を目撃する。</p>
+          <p>その一瞬を共に感じ
+            私だけの島を収める体験。</p>
+        </div>
+        <div class="large-6 small-12 columns">
+          <p>
+            KOMAILANDSは瀬戸内に浮かぶ3000もの島々に住む人と私だけの一瞬を求める人を結ぶプラットホームです。瀬戸内で生まれ育つ人々が感じる島の表情は何でしょう。瀬戸内海で日々生まれる美しい一瞬をあなたのカメラで撮影してみませんか。そこには、島の数だけ、そして、あなただけの瞬間をとらえる時間があるでしょう。
+          </p>
         </div>
       </div>
-      <div class="large-4 columns hide-for-small">
-        <h4>とっておきのスポットを<br>みつけよう！</h4><hr/>
-        <a class="large button expand" href="#">
-          サインアップ<br>（未登録の方）
-        </a>
-        <a class="large button expand" href="#">
-          サインイン<br>（すでに登録済みの方）
-        </a>
-      </div>
+    </div>
+    <div class="large-4 columns hide-for-small">
+      <h4>とっておきのスポットをみつけよう！</h4>
+      <hr/>
+      <a class="large button expand" href="#">
+        サインアップ<br>（未登録の方）
+      </a>
+      <a class="large button expand" href="#">
+        サインイン<br>（すでに登録済みの方）
+      </a>
     </div>
   </div>
 </div>
