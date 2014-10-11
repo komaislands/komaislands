@@ -16,7 +16,7 @@
 
 .row
   .large-12.columns
-    = link_to "#{@island.name}へいく", {}, class: 'button expand'
+    = link_to "#{@island.name}へいく", [:entry, @island], class: 'button expand'
 
 .row
   .columns
@@ -39,4 +39,4 @@
       li さしみがうまい
 
   .large-12.columns
-    = link_to "#{@island.name}へいく", {}, class: 'button expand'
+    = link_to "#{@island.name}へいく", [:entry, @island], class: 'button expand'

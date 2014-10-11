@@ -1,0 +1,20 @@
+.row
+  .columns
+    h1 #{@island.name}へいく
+    = form_for @island do |f|
+      | 仲間募集
+      .switch.large.round
+        = f.label "仲間募集"
+        = check_box_tag "hoge", "hoge", ""
+      | 船予約
+      .switch.large.round
+        = f.label "船予約"
+        = check_box_tag "goro", "hoge", ""
+      | 宿予約
+      .switch.large.round
+        = f.label "宿予約"
+        = check_box_tag "guru", "hoge", ""
+
+.row
+  .large-12.columns
+    = link_to "申し込み", [:entry, @island], class: 'button expand'
