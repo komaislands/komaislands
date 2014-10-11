@@ -1,6 +1,9 @@
 .main-image
   = image_tag "island_#{@island.id}.jpg"
-h1= @island.name
+
+.row
+  .large-12.columns
+    h1.pr= @island.name
 
 .large-12.columns
   .row
@@ -16,13 +19,18 @@ h1= @island.name
     = link_to "#{@island.name}へいく", {}, class: 'button expand'
 
 .row
+  .columns
+    p.pr ——瀬戸内で一番大きな無人島。——
   .large-6.columns
-    h2 詳細情報
 
-  .large-6.columns
+    h2 詳細情報
     dl
       dt 面積
-      dd xxxx.xxx
+      dd 7.25㎢
+      dt 所属
+      dd 広島県江田島市
+      dt 小話
+      dd かつて島の所有権を賭けて伝馬船競漕が行われた。ゴール直前にわらじを投げ、先の到着をアピールしたものが島の所有者になったとか、なっていないとか。
 
   .large-6.columns
     h2  食べ物情報

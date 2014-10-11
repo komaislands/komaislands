@@ -15,6 +15,21 @@
   </head>
 
   <body>
+    <div class="sticky fixed">
+      <nav class="top-bar" role="navigation" data-topbar data-options="sticky_on: [large medium]">
+        <ul class="title-area">
+          <li class="name">
+            <h1>
+              <a href="/">
+                私の狭い島
+              </a>
+            </h1>
+          </li>
+          <!--li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li-->
+        </ul>
+      </nav>
+    </div>
+
     <div class="wrap-main">
       <%= yield %>
       <%= javascript_include_tag "application" %>

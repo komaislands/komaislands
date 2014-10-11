@@ -19,3 +19,12 @@
 .main-image {
     margin: 0 0 2em 0;
 }
+
+.pr {
+    font-size: 2em;
+    text-align: center;
+}
+
+h1.pr {
+    margin: 0 0 1em;
+}
