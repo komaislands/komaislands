@@ -1,6 +1,8 @@
 .row
   .columns
-    h1 = @spot.description
+    h1
+      = @spot.description + " "
+      small = @island.name
 .row
   .columns
     img.th src=image_path("spot_1.jpg")
@@ -24,4 +26,5 @@
       dd = @spot.kimoti
 .row
   .columns
-    a.button href=url_for(@island) #{@island.name}にもどる
+    a.button.expand href=url_for(@island)
+      | #{@island.name}にもどる
