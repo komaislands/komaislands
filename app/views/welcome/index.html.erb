@@ -5,15 +5,13 @@
 </div>
 
 <div class="row desc">
-  <div class="large-12 medium-12 columns">
-    <% @spots.each do |spot| %>
-      <div class="large-3 medium-3 small-6 columns">
-        <%= link_to Island.find(1) do %>
-          <% image_tag "spot_#{spot.id}.jpg" %>
-        <% end %>
-      </div>
-    <% end %>
-  </div>
+  <% @spots.each do |spot| %>
+    <div class="large-3 medium-3 small-6 columns">
+      <%= link_to Island.find(1) do %>
+        <% image_tag "spot_#{spot.id}.jpg" %>
+      <% end %>
+    </div>
+  <% end %>
 </div>
 
 <div>
@@ -21,7 +19,6 @@
     <div class="large-12 columns">
       <div class="large-8 columns">
         <div class="row">
-          <div class="columns">
             <h4>私のせまい島。</h4>
             <hr/>
             <div class="large-6 small-6 columns">
@@ -35,7 +32,6 @@
               <p>
                 KOMAILANDSは瀬戸内に浮かぶ3000もの島々に住む人と私だけの一瞬を求める人を結ぶプラットホームです。瀬戸内で生まれ育つ人々が感じる島の表情は何でしょう。瀬戸内海で日々生まれる美しい一瞬をあなたのカメラで撮影してみませんか。そこには、島の数だけ、そして、あなただけの瞬間をとらえる時間があるでしょう。
               </p>
-            </div>
           </div>
         </div>
       </div>
