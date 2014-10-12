@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources "spots"
   resources "islands" do
     member do
-      get "entry"
+      resources "entries"
     end
   end
   root 'welcome#index'

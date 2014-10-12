@@ -1,19 +1,19 @@
 .row
   .columns
     h1 #{@island.name}へいく
-    = form_for @island do |f|
+    = form_for @entry do |f|
       | 仲間募集
       .switch.large.round
         = f.label "仲間募集"
-        = check_box_tag "hoge", "hoge", ""
+        = f.check :friend
       | 船予約
       .switch.large.round
         = f.label "船予約"
-        = check_box_tag "goro", "hoge", ""
+        = f.check :ship
       | 宿予約
       .switch.large.round
         = f.label "宿予約"
-        = check_box_tag "guru", "hoge", ""
+        = f.check :hotel
 
 .row
   .large-12.columns

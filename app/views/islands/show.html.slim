@@ -1,9 +1,16 @@
+- if flash[:notice]
+  .row
+    .alert-box.success
+      = flash[:notice]
+
 .row.main-image
   = image_tag "island_#{@island.id}.jpg"
 
 .row
   .large-12.columns
     h1.pr= @island.name
+  .columns
+    p.lead.text-center 瀬戸内で一番大きな無人島。
 
 .row
   .columns
@@ -14,12 +21,9 @@
             = image_tag "spot_#{spot.id}.jpg", class: "th"
             = spot.description
 
-
 .large-12.columns
-  = link_to "#{@island.name}へいく", [:entry, @island], class: 'button expand'
-
-.columns
-  p.pr ——瀬戸内で一番大きな無人島。——
+  a.button.expand href="#" data-reveal-id="entry"
+    = "#{@island.name}へいく"
 
 .large-6.columns
     h2 詳細情報
@@ -38,4 +42,37 @@
     li さしみがうまい
 
 .large-12.columns
-  = link_to "#{@island.name}へいく", [:entry, @island], class: 'button expand'
+  a.button.expand href="#" data-reveal-id="entry"
+    = "#{@island.name}へいく"
+
+#entry.reveal-modal data-reveal=true
+  = form_for @entry do |f|
+    .row
+      .columns
+        h1 #{@island.name}へいく
+
+    .row
+      .large-6.columns
+        = f.label :friend, "仲間募集"
+        = f.radio_button :friend, true
+        = f.label :friend_true, "募集する"
+        = f.radio_button :friend, false
+        = f.label :friend_false, "募集しない"
+      .large-6.columns
+        = f.label :ship, "船予約"
+        = f.radio_button :ship, true
+        = f.label :ship_true, "予約する"
+        = f.radio_button :ship, false
+        = f.label :ship_false, "予約しない"
+      .large-6.columns
+        = f.label :hotel, "宿予約"
+        = f.radio_button :hotel, true
+        = f.label :hotel_true, "予約する"
+        = f.radio_button :hotel, false
+        = f.label :hotel_false, "予約しない"
+
+    .row
+      .columns
+        = f.submit "申し込み", class: "button"
+
+  a.close-reveal-modal &#215;
